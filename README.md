@@ -13,4 +13,5 @@
 - composer install
 - change .env database details
 - php artisan migrate
+- php artisan serve
 - setup front-end
