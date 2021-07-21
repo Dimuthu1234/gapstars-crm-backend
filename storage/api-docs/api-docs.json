@@ -1,0 +1,40 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Gapstars CRM ApplicationAPI",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/customer": {
+            "get": {
+                "summary": "Get Customers",
+                "operationId": "testing",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                },
+                "security": [
+                    {
+                        "sanctum": []
+                    }
+                ]
+            }
+        }
+    },
+    "security": {
+        "0": [],
+        "sanctum": {
+            "type": "apiKey",
+            "description": "Bearer",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}
