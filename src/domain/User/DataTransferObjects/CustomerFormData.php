@@ -2,29 +2,26 @@
 
 namespace Domain\User\DataTransferObjects;
 
-use Carbon\Carbon;
-use Spatie\DataTransferObject\Attributes\CastWith;
 use Spatie\DataTransferObject\DataTransferObject;
-use Support\Casters\DateCaster;
 
 class CustomerFormData extends DataTransferObject
 {
     /**
-     * Description of the post.
+     * First name of the customer.
      *
      * @var string|null
      */
     public ?string $firstName;
 
     /**
-     * Description of the post.
+     * Last name of the customer.
      *
      * @var string|null
      */
     public ?string $lastName;
 
     /**
-     * Description of the post.
+     * Email of the customer.
      *
      * @var string|null
      */

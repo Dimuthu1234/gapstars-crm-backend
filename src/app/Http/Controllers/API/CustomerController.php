@@ -62,7 +62,7 @@ class CustomerController extends Controller
                         : null,
                     )
                 ),
-                200
+                201
             );
         } catch (UnknownProperties | Exception $exception) {
             return response()

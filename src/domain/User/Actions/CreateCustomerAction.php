@@ -37,7 +37,7 @@ class CreateCustomerAction
 
             DB::commit();
 
-            return new CustomerResource($customer);
+            return new CustomerResource($customer->load('phoneNumbers'));
         } catch (Exception $e) {
             DB::rollBack();
 
