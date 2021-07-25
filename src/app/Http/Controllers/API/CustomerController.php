@@ -25,7 +25,7 @@ class CustomerController extends Controller
      *
      * @return CustomerCollection
      */
-    public function index(Request $request)
+    public function index(Request $request): CustomerCollection
     {
         $customers = Customer::query()
             ->with(['phoneNumbers'])
@@ -62,7 +62,7 @@ class CustomerController extends Controller
                         : null,
                     )
                 ),
-                201
+                Response::HTTP_CREATED
             );
         } catch (UnknownProperties | Exception $exception) {
             return response()

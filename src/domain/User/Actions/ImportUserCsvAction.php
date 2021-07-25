@@ -26,6 +26,10 @@ class ImportUserCsvAction
             $user->name = $userFormData->name;
             $user->email = $userFormData->email;
             $user->password = Hash::make($userFormData->password);
+            $user->dob = $userFormData->dateOfBirth;
+            $user->telephone = $userFormData->telephone;
+            $user->town = $userFormData->town;
+            $user->country = $userFormData->country;
 
             $user->save();
 

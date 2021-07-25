@@ -16,9 +16,9 @@ use App\Http\Controllers\API\UserController;
 |
 */
 
-//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 Route::middleware(['auth:sanctum'])->group(function () {
     // Customer routes
@@ -30,7 +30,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     // User routes
 
-    Route::get('/user', [UserController::class, 'index'])->name('user.index');
+    Route::get('/all-user', [UserController::class, 'index'])->name('user.index');
     Route::post('/user', [UserController::class, 'store'])->name('user.store');
     Route::put('/user/{user}', [UserController::class, 'update'])->name('user.update');
     Route::delete('/user/{user}', [UserController::class, 'destroy'])->name('user.destroy');
